@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		095247331C32E897009322DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247321C32E897009322DC /* AppDelegate.swift */; };
+		095247351C32E897009322DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247341C32E897009322DC /* ViewController.swift */; };
+		095247381C32E897009322DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095247361C32E897009322DC /* Main.storyboard */; };
+		0952473A1C32E897009322DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095247391C32E897009322DC /* Assets.xcassets */; };
+		0952473D1C32E897009322DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0952473B1C32E897009322DC /* LaunchScreen.storyboard */; };
+		095247481C32E898009322DC /* TracktionProto1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247471C32E898009322DC /* TracktionProto1Tests.swift */; };
+		0952474D1C32E898009322DC /* TracktionProto1 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0952474C1C32E898009322DC /* TracktionProto1 WatchKit App.app */; };
+		095247531C32E898009322DC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095247511C32E898009322DC /* Interface.storyboard */; };
+		095247551C32E898009322DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095247541C32E898009322DC /* Assets.xcassets */; };
+		0952475C1C32E898009322DC /* TracktionProto1 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0952475B1C32E898009322DC /* TracktionProto1 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		095247611C32E898009322DC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247601C32E898009322DC /* InterfaceController.swift */; };
+		095247631C32E898009322DC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247621C32E898009322DC /* ExtensionDelegate.swift */; };
+		095247651C32E898009322DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095247641C32E898009322DC /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		095247441C32E898009322DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095247271C32E897009322DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0952472E1C32E897009322DC;
+			remoteInfo = TracktionProto1;
+		};
+		0952474E1C32E898009322DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095247271C32E897009322DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0952474B1C32E898009322DC;
+			remoteInfo = "TracktionProto1 WatchKit App";
+		};
+		0952475D1C32E898009322DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095247271C32E897009322DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0952475A1C32E898009322DC;
+			remoteInfo = "TracktionProto1 WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0952476C1C32E898009322DC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0952475C1C32E898009322DC /* TracktionProto1 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095247701C32E898009322DC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0952474D1C32E898009322DC /* TracktionProto1 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0952472F1C32E897009322DC /* TracktionProto1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TracktionProto1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		095247321C32E897009322DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		095247341C32E897009322DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		095247371C32E897009322DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		095247391C32E897009322DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0952473C1C32E897009322DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0952473E1C32E897009322DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		095247431C32E898009322DC /* TracktionProto1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TracktionProto1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		095247471C32E898009322DC /* TracktionProto1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracktionProto1Tests.swift; sourceTree = "<group>"; };
+		095247491C32E898009322DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0952474C1C32E898009322DC /* TracktionProto1 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TracktionProto1 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		095247521C32E898009322DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		095247541C32E898009322DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		095247561C32E898009322DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0952475B1C32E898009322DC /* TracktionProto1 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TracktionProto1 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		095247601C32E898009322DC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		095247621C32E898009322DC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		095247641C32E898009322DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		095247661C32E898009322DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0952472C1C32E897009322DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095247401C32E898009322DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095247581C32E898009322DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		095247261C32E897009322DC = {
+			isa = PBXGroup;
+			children = (
+				095247311C32E897009322DC /* TracktionProto1 */,
+				095247461C32E898009322DC /* TracktionProto1Tests */,
+				095247501C32E898009322DC /* TracktionProto1 WatchKit App */,
+				0952475F1C32E898009322DC /* TracktionProto1 WatchKit Extension */,
+				095247301C32E897009322DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		095247301C32E897009322DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0952472F1C32E897009322DC /* TracktionProto1.app */,
+				095247431C32E898009322DC /* TracktionProto1Tests.xctest */,
+				0952474C1C32E898009322DC /* TracktionProto1 WatchKit App.app */,
+				0952475B1C32E898009322DC /* TracktionProto1 WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		095247311C32E897009322DC /* TracktionProto1 */ = {
+			isa = PBXGroup;
+			children = (
+				095247321C32E897009322DC /* AppDelegate.swift */,
+				095247341C32E897009322DC /* ViewController.swift */,
+				095247361C32E897009322DC /* Main.storyboard */,
+				095247391C32E897009322DC /* Assets.xcassets */,
+				0952473B1C32E897009322DC /* LaunchScreen.storyboard */,
+				0952473E1C32E897009322DC /* Info.plist */,
+			);
+			path = TracktionProto1;
+			sourceTree = "<group>";
+		};
+		095247461C32E898009322DC /* TracktionProto1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				095247471C32E898009322DC /* TracktionProto1Tests.swift */,
+				095247491C32E898009322DC /* Info.plist */,
+			);
+			path = TracktionProto1Tests;
+			sourceTree = "<group>";
+		};
+		095247501C32E898009322DC /* TracktionProto1 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				095247511C32E898009322DC /* Interface.storyboard */,
+				095247541C32E898009322DC /* Assets.xcassets */,
+				095247561C32E898009322DC /* Info.plist */,
+			);
+			path = "TracktionProto1 WatchKit App";
+			sourceTree = "<group>";
+		};
+		0952475F1C32E898009322DC /* TracktionProto1 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				095247601C32E898009322DC /* InterfaceController.swift */,
+				095247621C32E898009322DC /* ExtensionDelegate.swift */,
+				095247641C32E898009322DC /* Assets.xcassets */,
+				095247661C32E898009322DC /* Info.plist */,
+			);
+			path = "TracktionProto1 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0952472E1C32E897009322DC /* TracktionProto1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 095247711C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1" */;
+			buildPhases = (
+				0952472B1C32E897009322DC /* Sources */,
+				0952472C1C32E897009322DC /* Frameworks */,
+				0952472D1C32E897009322DC /* Resources */,
+				095247701C32E898009322DC /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0952474F1C32E898009322DC /* PBXTargetDependency */,
+			);
+			name = TracktionProto1;
+			productName = TracktionProto1;
+			productReference = 0952472F1C32E897009322DC /* TracktionProto1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		095247421C32E898009322DC /* TracktionProto1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 095247741C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1Tests" */;
+			buildPhases = (
+				0952473F1C32E898009322DC /* Sources */,
+				095247401C32E898009322DC /* Frameworks */,
+				095247411C32E898009322DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				095247451C32E898009322DC /* PBXTargetDependency */,
+			);
+			name = TracktionProto1Tests;
+			productName = TracktionProto1Tests;
+			productReference = 095247431C32E898009322DC /* TracktionProto1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0952474B1C32E898009322DC /* TracktionProto1 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0952476D1C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1 WatchKit App" */;
+			buildPhases = (
+				0952474A1C32E898009322DC /* Resources */,
+				0952476C1C32E898009322DC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0952475E1C32E898009322DC /* PBXTargetDependency */,
+			);
+			name = "TracktionProto1 WatchKit App";
+			productName = "TracktionProto1 WatchKit App";
+			productReference = 0952474C1C32E898009322DC /* TracktionProto1 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0952475A1C32E898009322DC /* TracktionProto1 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 095247691C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1 WatchKit Extension" */;
+			buildPhases = (
+				095247571C32E898009322DC /* Sources */,
+				095247581C32E898009322DC /* Frameworks */,
+				095247591C32E898009322DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TracktionProto1 WatchKit Extension";
+			productName = "TracktionProto1 WatchKit Extension";
+			productReference = 0952475B1C32E898009322DC /* TracktionProto1 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		095247271C32E897009322DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hervé PEROTEAU";
+				TargetAttributes = {
+					0952472E1C32E897009322DC = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					095247421C32E898009322DC = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 0952472E1C32E897009322DC;
+					};
+					0952474B1C32E898009322DC = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					0952475A1C32E898009322DC = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 0952472A1C32E897009322DC /* Build configuration list for PBXProject "TracktionProto1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 095247261C32E897009322DC;
+			productRefGroup = 095247301C32E897009322DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0952472E1C32E897009322DC /* TracktionProto1 */,
+				095247421C32E898009322DC /* TracktionProto1Tests */,
+				0952474B1C32E898009322DC /* TracktionProto1 WatchKit App */,
+				0952475A1C32E898009322DC /* TracktionProto1 WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0952472D1C32E897009322DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0952473D1C32E897009322DC /* LaunchScreen.storyboard in Resources */,
+				0952473A1C32E897009322DC /* Assets.xcassets in Resources */,
+				095247381C32E897009322DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095247411C32E898009322DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0952474A1C32E898009322DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095247551C32E898009322DC /* Assets.xcassets in Resources */,
+				095247531C32E898009322DC /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095247591C32E898009322DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095247651C32E898009322DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0952472B1C32E897009322DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095247351C32E897009322DC /* ViewController.swift in Sources */,
+				095247331C32E897009322DC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0952473F1C32E898009322DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095247481C32E898009322DC /* TracktionProto1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		095247571C32E898009322DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				095247631C32E898009322DC /* ExtensionDelegate.swift in Sources */,
+				095247611C32E898009322DC /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		095247451C32E898009322DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0952472E1C32E897009322DC /* TracktionProto1 */;
+			targetProxy = 095247441C32E898009322DC /* PBXContainerItemProxy */;
+		};
+		0952474F1C32E898009322DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0952474B1C32E898009322DC /* TracktionProto1 WatchKit App */;
+			targetProxy = 0952474E1C32E898009322DC /* PBXContainerItemProxy */;
+		};
+		0952475E1C32E898009322DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0952475A1C32E898009322DC /* TracktionProto1 WatchKit Extension */;
+			targetProxy = 0952475D1C32E898009322DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		095247361C32E897009322DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				095247371C32E897009322DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0952473B1C32E897009322DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0952473C1C32E897009322DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		095247511C32E898009322DC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				095247521C32E898009322DC /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		095247671C32E898009322DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		095247681C32E898009322DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0952476A1C32E898009322DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TracktionProto1 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		0952476B1C32E898009322DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TracktionProto1 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		0952476E1C32E898009322DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = TracktionProto1_WatchKit_Extension;
+				INFOPLIST_FILE = "TracktionProto1 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		0952476F1C32E898009322DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = TracktionProto1_WatchKit_Extension;
+				INFOPLIST_FILE = "TracktionProto1 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		095247721C32E898009322DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TracktionProto1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		095247731C32E898009322DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TracktionProto1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		095247751C32E898009322DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TracktionProto1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TracktionProto1.app/TracktionProto1";
+			};
+			name = Debug;
+		};
+		095247761C32E898009322DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TracktionProto1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TracktionProto1.app/TracktionProto1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0952472A1C32E897009322DC /* Build configuration list for PBXProject "TracktionProto1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095247671C32E898009322DC /* Debug */,
+				095247681C32E898009322DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		095247691C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0952476A1C32E898009322DC /* Debug */,
+				0952476B1C32E898009322DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0952476D1C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0952476E1C32E898009322DC /* Debug */,
+				0952476F1C32E898009322DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		095247711C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095247721C32E898009322DC /* Debug */,
+				095247731C32E898009322DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		095247741C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				095247751C32E898009322DC /* Debug */,
+				095247761C32E898009322DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 095247271C32E897009322DC /* Project object */;
+}
