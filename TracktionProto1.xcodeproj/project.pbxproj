@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093CEFAC1C39B9D80026CA99 /* TrackDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093CEFAB1C39B9D80026CA99 /* TrackDataItem.swift */; };
+		093CEFAF1C39C6A20026CA99 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093CEFAE1C39C6A20026CA99 /* WatchConnectivityManager.swift */; };
 		095247331C32E897009322DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247321C32E897009322DC /* AppDelegate.swift */; };
-		095247351C32E897009322DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247341C32E897009322DC /* ViewController.swift */; };
+		095247351C32E897009322DC /* TrackRealTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247341C32E897009322DC /* TrackRealTimeViewController.swift */; };
 		095247381C32E897009322DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095247361C32E897009322DC /* Main.storyboard */; };
 		0952473A1C32E897009322DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095247391C32E897009322DC /* Assets.xcassets */; };
 		0952473D1C32E897009322DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0952473B1C32E897009322DC /* LaunchScreen.storyboard */; };
@@ -72,9 +74,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		093CEFAB1C39B9D80026CA99 /* TrackDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDataItem.swift; sourceTree = "<group>"; };
+		093CEFAE1C39C6A20026CA99 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		0952472F1C32E897009322DC /* TracktionProto1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TracktionProto1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095247321C32E897009322DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		095247341C32E897009322DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		095247341C32E897009322DC /* TrackRealTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRealTimeViewController.swift; sourceTree = "<group>"; };
 		095247371C32E897009322DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		095247391C32E897009322DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0952473C1C32E897009322DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +122,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093CEFAA1C39B8640026CA99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				093CEFAB1C39B9D80026CA99 /* TrackDataItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		093CEFAD1C39C6590026CA99 /* WatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				093CEFAE1C39C6A20026CA99 /* WatchConnectivityManager.swift */,
+			);
+			name = WatchConnectivity;
+			sourceTree = "<group>";
+		};
 		095247261C32E897009322DC = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +163,10 @@
 		095247311C32E897009322DC /* TracktionProto1 */ = {
 			isa = PBXGroup;
 			children = (
+				093CEFAD1C39C6590026CA99 /* WatchConnectivity */,
+				093CEFAA1C39B8640026CA99 /* Model */,
 				095247321C32E897009322DC /* AppDelegate.swift */,
-				095247341C32E897009322DC /* ViewController.swift */,
+				095247341C32E897009322DC /* TrackRealTimeViewController.swift */,
 				095247361C32E897009322DC /* Main.storyboard */,
 				095247391C32E897009322DC /* Assets.xcassets */,
 				0952473B1C32E897009322DC /* LaunchScreen.storyboard */,
@@ -345,7 +367,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				095247351C32E897009322DC /* ViewController.swift in Sources */,
+				093CEFAC1C39B9D80026CA99 /* TrackDataItem.swift in Sources */,
+				095247351C32E897009322DC /* TrackRealTimeViewController.swift in Sources */,
+				093CEFAF1C39C6A20026CA99 /* WatchConnectivityManager.swift in Sources */,
 				095247331C32E897009322DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +645,7 @@
 				0952476B1C32E898009322DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0952476D1C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1 WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +654,7 @@
 				0952476F1C32E898009322DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		095247711C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1" */ = {
 			isa = XCConfigurationList;
@@ -637,6 +663,7 @@
 				095247731C32E898009322DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		095247741C32E898009322DC /* Build configuration list for PBXNativeTarget "TracktionProto1Tests" */ = {
 			isa = XCConfigurationList;
@@ -645,6 +672,7 @@
 				095247761C32E898009322DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
