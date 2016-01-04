@@ -29,11 +29,10 @@ class WatchConnectivityManager: NSObject {
 			}
 		}
 	}
-	
-	override init() {
-		super.init()
+		
+	func activateSession() {
 		if (WCSession.isSupported()) {
-			self.session = WCSession.defaultSession()
+			session = WCSession.defaultSession()
 		}
 	}
 }

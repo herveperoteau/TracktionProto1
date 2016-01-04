@@ -48,9 +48,16 @@ class TrackRealTimeViewController: UIViewController {
 		self.setAccelerationYValue(0)
 		self.setAccelerationZValue(0)
 
+		self.updateStatusUI()
+	}
+	
+	func updateStatusUI() {
 		if let session = WatchConnectivityManager.sharedInstance.session {
 			if !session.paired {
 				self.lbStatus.text = "Need paired with your watch !"
+			}
+			else if !session.watchAppInstalled {
+				self.lbStatus.text = "Install app on your watch !"
 			}
 			else {
 				self.lbStatus.text = "Waiting tracking on Watch ..."
@@ -103,11 +110,7 @@ class TrackRealTimeViewController: UIViewController {
 		}
 	}
 	func handlerWCsessionWatchStateDidChange(notification: NSNotification){
-		if let session = notification.object as? WCSession {
-			if (!session.paired) {
-				self.lbStatus.text = "Need paired with your watch !!!"
-			}
-		}
+		updateStatusUI()
 	}
 
 }
