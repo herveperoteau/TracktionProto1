@@ -291,6 +291,7 @@
 				TargetAttributes = {
 					0952472E1C32E897009322DC = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E536PJHTHJ;
 					};
 					095247421C32E898009322DC = {
 						CreatedOnToolsVersion = 7.2;
@@ -298,9 +299,11 @@
 					};
 					0952474B1C32E898009322DC = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E536PJHTHJ;
 					};
 					0952475A1C32E898009322DC = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E536PJHTHJ;
 					};
 				};
 			};
@@ -523,6 +526,7 @@
 		0952476A1C32E898009322DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TracktionProto1 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1.watchkitapp.watchkitextension;
@@ -537,6 +541,7 @@
 		0952476B1C32E898009322DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "TracktionProto1 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1.watchkitapp.watchkitextension;
@@ -552,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = TracktionProto1_WatchKit_Extension;
 				INFOPLIST_FILE = "TracktionProto1 WatchKit App/Info.plist";
@@ -568,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = TracktionProto1_WatchKit_Extension;
 				INFOPLIST_FILE = "TracktionProto1 WatchKit App/Info.plist";
@@ -584,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TracktionProto1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1;
@@ -595,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TracktionProto1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peroteau.herve.TracktionProto1;

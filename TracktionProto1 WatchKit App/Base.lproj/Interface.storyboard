@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Oah-tz-eVJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <scene sceneID="TDQ-Dt-xMr">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller spacing="30" id="Oah-tz-eVJ" customClass="InterfaceController" customModule="WatchOS2_NewAPI_CoreMotion_CMAccelerometerData_Example_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="lub-Fd-L04">
+                            <items>
+                                <label alignment="left" text="X :" id="kcV-Sc-sj4"/>
+                                <label alignment="right" text="0.32" id="uPe-67-1oS"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ZTB-RD-rpj">
+                            <items>
+                                <label alignment="left" text="Y :" id="rNs-CP-dHQ"/>
+                                <label alignment="right" text="0.24" id="Che-HI-xPX"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Rjk-Rm-H7H">
+                            <items>
+                                <label alignment="left" text="Z :" id="pkm-ux-pIE"/>
+                                <label alignment="right" text="-1.24" id="hbA-VI-4PU"/>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="20" right="20" top="0.0" bottom="0.0"/>
+                    <connections>
+                        <outlet property="xLbl" destination="kcV-Sc-sj4" id="232-CV-68B"/>
+                        <outlet property="xValues" destination="uPe-67-1oS" id="7vZ-yT-Fcd"/>
+                        <outlet property="yLbl" destination="rNs-CP-dHQ" id="Ck1-hN-GHv"/>
+                        <outlet property="yValues" destination="Che-HI-xPX" id="JlC-ah-WlU"/>
+                        <outlet property="zLbl" destination="pkm-ux-pIE" id="Wze-R5-mXQ"/>
+                        <outlet property="zValues" destination="hbA-VI-4PU" id="ZXK-cR-HZ1"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="266" y="302"/>
         </scene>
     </scenes>
 </document>
