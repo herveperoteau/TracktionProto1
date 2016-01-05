@@ -60,7 +60,7 @@ class InterfaceController: WKInterfaceController {
 	func getMotionManagerUpdates() {
 		
 		// init interval for update (NSTimeInterval)
-		self.motionManager.accelerometerUpdateInterval = 1  //0.1
+		self.motionManager.accelerometerUpdateInterval = 0.1
 		
 		// get current accelerometerData
 		if self.motionManager.accelerometerAvailable {
@@ -122,7 +122,10 @@ class InterfaceController: WKInterfaceController {
 	}
 	
 	func sendTrackItem(trackItem: TrackDataItem) {
+		
 		let session = WCSession.defaultSession()
+		
+		// send to iPhone
 		session.transferUserInfo(trackItem.toDictionary())
 	}
 }

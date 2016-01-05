@@ -95,11 +95,11 @@ class TrackRealTimeViewController: UIViewController {
 	func registerForWKNotifications() {
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlerWCdidReceiveUserInfo:",
 			name:NotificationWCdidReceiveUserInfo, object: nil)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlerWCsessionWatchStateDidChange",
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlerWCsessionWatchStateDidChange:",
 			name:NotificationWCsessionWatchStateDidChange, object: nil)
 	}
 	func unregisterForWKNotifications() {
-		NSNotificationCenter.defaultCenter().removeObserver(self, name: NotificationWCdidReceiveUserInfo, object: nil)
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: NotificationWCdidReceiveMessage, object: nil)
 		NSNotificationCenter.defaultCenter().removeObserver(self, name: NotificationWCsessionWatchStateDidChange, object: nil)
 	}
 	func handlerWCdidReceiveUserInfo(notification: NSNotification){

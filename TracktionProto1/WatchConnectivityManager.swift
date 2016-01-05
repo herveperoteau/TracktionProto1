@@ -9,7 +9,9 @@
 import Foundation
 import WatchConnectivity
 
+let NotificationWCdidReceiveApplicationContext = "NotificationWCdidReceiveApplicationContext"
 let NotificationWCdidReceiveUserInfo = "NotificationWCdidReceiveUserInfo"
+let NotificationWCdidReceiveMessage = "NotificationWCdidReceiveMessage"
 let NotificationWCsessionWatchStateDidChange = "NotificationWCsessionWatchStateDidChange"
 
 class WatchConnectivityManager: NSObject {
@@ -45,6 +47,24 @@ extension WatchConnectivityManager : WCSessionDelegate {
 		dispatch_async(dispatch_get_main_queue()) {
 			NSNotificationCenter.defaultCenter().postNotificationName(NotificationWCdidReceiveUserInfo,
 				object: trackItem, userInfo: userInfo)
+		}
+	}
+	
+	func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+		print("didReceiveMessage ...")
+		let trackItem = TrackDataItem.fromDictionary(message)
+		dispatch_async(dispatch_get_main_queue()) {
+			NSNotificationCenter.defaultCenter().postNotificationName(NotificationWCdidReceiveMessage,
+				object: trackItem, userInfo: message)
+		}
+	}
+	
+	func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+		print("didReceiveApplicationContext ...")
+		let trackItem = TrackDataItem.fromDictionary(applicationContext)
+		dispatch_async(dispatch_get_main_queue()) {
+			NSNotificationCenter.defaultCenter().postNotificationName(NotificationWCdidReceiveApplicationContext,
+				object: trackItem, userInfo: applicationContext)
 		}
 	}
 	
