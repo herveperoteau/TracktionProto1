@@ -29,6 +29,7 @@ class InterfaceController: WKInterfaceController {
 	
 	var tracking = false
 	var countTracking = 0
+	var startSessionTimestamp: NSTimeInterval = 0
 	
 	// MARK: - Context Initializer
 	override func awakeWithContext(context: AnyObject?) {
@@ -95,12 +96,12 @@ class InterfaceController: WKInterfaceController {
 							self.countTracking++
 							self.countValue.setText(String(self.countTracking))
 							let trackItem = TrackDataItem()
+							trackItem.trackStartSession = self.startSessionTimestamp
+							trackItem.trackId = self.countTracking
 							trackItem.accelerationX = (accelerometerData?.acceleration.x)!
 							trackItem.accelerationY = (accelerometerData?.acceleration.y)!
 							trackItem.accelerationZ = (accelerometerData?.acceleration.z)!
-							trackItem.trackId = self.countTracking
 							trackItem.timeStamp = (accelerometerData?.timestamp)!
-							
 							self.sendTrackItem(trackItem)
 						}
 					}
@@ -113,9 +114,20 @@ class InterfaceController: WKInterfaceController {
 		if (tracking) {
 			tracking = false
 			btnStartStop.setTitle("START")
+			
+			let trackItem = TrackDataItem()
+			trackItem.trackStartSession = startSessionTimestamp
+			trackItem.trackId = self.countTracking
+			trackItem.accelerationX = 0
+			trackItem.accelerationY = 0
+			trackItem.accelerationZ = 0
+			trackItem.timeStamp = 0
+			trackItem.info = infoEndSession
+			sendTrackItem(trackItem)
 		}
 		else {
 			countTracking = 0
+			startSessionTimestamp = NSDate().timeIntervalSince1970
 			tracking = true
 			btnStartStop.setTitle("STOP")
 		}

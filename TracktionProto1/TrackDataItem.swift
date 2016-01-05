@@ -8,31 +8,47 @@
 
 import Foundation
 
+let infoEndSession = "END"
+
+let keyTrackStartSession = "tSS"
+let keyTrackId = "tId"
+let keyTimeStamp = "TS"
+let keyAccelerationX = "X"
+let keyAccelerationY = "Y"
+let keyAccelerationZ = "Z"
+let keyInfo = "I"
+
 class TrackDataItem {
 	
-	var trackId : Int = 0
-	var timeStamp : Double = 0.0
-	var accelerationX : Double = 0.0
-	var accelerationY : Double = 0
-	var accelerationZ : Double = 0
+	var trackStartSession: Double = 0
+	var trackId: Int = 0
+	var timeStamp: Double = 0.0
+	var accelerationX: Double = 0.0
+	var accelerationY: Double = 0
+	var accelerationZ: Double = 0
+	var info: String = ""
 	
 	static func fromDictionary(userInfo: [String : AnyObject]) -> TrackDataItem {
 		let item = TrackDataItem()
-		item.trackId = userInfo["trackId"] as! Int
-		item.timeStamp = userInfo["timeStamp"] as! Double
-		item.accelerationX = userInfo["accelerationX"] as! Double
-		item.accelerationY = userInfo["accelerationY"] as! Double
-		item.accelerationZ = userInfo["accelerationZ"] as! Double
+		item.trackStartSession = userInfo[keyTrackStartSession] as! Double
+		item.trackId = userInfo[keyTrackId] as! Int
+		item.timeStamp = userInfo[keyTimeStamp] as! Double
+		item.accelerationX = userInfo[keyAccelerationX] as! Double
+		item.accelerationY = userInfo[keyAccelerationY] as! Double
+		item.accelerationZ = userInfo[keyAccelerationZ] as! Double
+		item.info = userInfo[keyInfo] as! String
 		return item
 	}
 	
 	func toDictionary() -> [String : AnyObject] {
 		var userInfo = [String : AnyObject]()
-		userInfo["trackId"] = trackId
-		userInfo["timeStamp"] = timeStamp
-		userInfo["accelerationX"] = accelerationX
-		userInfo["accelerationY"] = accelerationY
-		userInfo["accelerationZ"] = accelerationZ
+		userInfo[keyTrackStartSession] = trackStartSession
+		userInfo[keyTrackId] = trackId
+		userInfo[keyTimeStamp] = timeStamp
+		userInfo[keyAccelerationX] = accelerationX
+		userInfo[keyAccelerationY] = accelerationY
+		userInfo[keyAccelerationZ] = accelerationZ
+		userInfo[keyInfo] = info
 		return userInfo
 	}
 }

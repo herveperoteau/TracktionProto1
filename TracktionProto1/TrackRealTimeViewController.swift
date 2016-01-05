@@ -69,12 +69,17 @@ class TrackRealTimeViewController: UIViewController {
 	}
 	
 	func refreshWithTrackDataItem(item: TrackDataItem) {
-		self.lbStatus.text = "Tracking ..."
-		self.lbTrackId.text = String(item.trackId)
-		self.lbTimeStamp.text = String(item.timeStamp)
-		self.setAccelerationXValue(item.accelerationX)
-		self.setAccelerationYValue(item.accelerationY)
-		self.setAccelerationZValue(item.accelerationZ)
+		if (item.info == infoEndSession) {
+			lbStatus.text = "Tracking \(item.trackStartSession) ended."
+			return;
+		}
+
+		lbStatus.text = "Tracking \(item.trackStartSession) ..."
+		lbTrackId.text = String(item.trackId)
+		lbTimeStamp.text = String(item.timeStamp)
+		setAccelerationXValue(item.accelerationX)
+		setAccelerationYValue(item.accelerationY)
+		setAccelerationZValue(item.accelerationZ)
 	}
 
 	func setAccelerationXValue(value: Double) {
