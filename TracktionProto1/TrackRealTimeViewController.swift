@@ -69,14 +69,12 @@ class TrackRealTimeViewController: UIViewController {
 	}
 	
 	func refreshWithTrackDataItem(item: TrackDataItem) {
-		dispatch_async(dispatch_get_main_queue()) {
-			self.lbStatus.text = "Tracking ..."
-			self.lbTrackId.text = String(format:"%f", item.trackId)
-			self.lbTimeStamp.text = String(format:"%f", item.timeStamp)
-			self.setAccelerationXValue(item.accelerationX)
-			self.setAccelerationYValue(item.accelerationY)
-			self.setAccelerationZValue(item.accelerationZ)
-		}
+		self.lbStatus.text = "Tracking ..."
+		self.lbTrackId.text = String(item.trackId)
+		self.lbTimeStamp.text = String(item.timeStamp)
+		self.setAccelerationXValue(item.accelerationX)
+		self.setAccelerationYValue(item.accelerationY)
+		self.setAccelerationZValue(item.accelerationZ)
 	}
 
 	func setAccelerationXValue(value: Double) {
@@ -95,7 +93,7 @@ class TrackRealTimeViewController: UIViewController {
 	}
 	
 	func registerForWKNotifications() {
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlerWCdidReceiveUserInfo",
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlerWCdidReceiveUserInfo:",
 			name:NotificationWCdidReceiveUserInfo, object: nil)
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlerWCsessionWatchStateDidChange",
 			name:NotificationWCsessionWatchStateDidChange, object: nil)
@@ -104,7 +102,7 @@ class TrackRealTimeViewController: UIViewController {
 		NSNotificationCenter.defaultCenter().removeObserver(self, name: NotificationWCdidReceiveUserInfo, object: nil)
 		NSNotificationCenter.defaultCenter().removeObserver(self, name: NotificationWCsessionWatchStateDidChange, object: nil)
 	}
-	func handlerWKdidReceiveUserInfo(notification: NSNotification){
+	func handlerWCdidReceiveUserInfo(notification: NSNotification){
 		if let trackItem = notification.object as? TrackDataItem {
 			refreshWithTrackDataItem(trackItem)
 		}

@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 import CoreMotion
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
 	
@@ -20,8 +21,14 @@ class InterfaceController: WKInterfaceController {
 	@IBOutlet var yValues: WKInterfaceLabel!
 	@IBOutlet var zValues: WKInterfaceLabel!
 	
+	@IBOutlet var countValue: WKInterfaceLabel!
+	@IBOutlet var btnStartStop: WKInterfaceButton!
+	
 	// MARK: - Properties
 	private let motionManager = CMMotionManager()
+	
+	var tracking = false
+	var countTracking = 0
 	
 	// MARK: - Context Initializer
 	override func awakeWithContext(context: AnyObject?) {
@@ -32,7 +39,6 @@ class InterfaceController: WKInterfaceController {
 		self.yValues.setText("-")
 		self.zValues.setText("-")
 	}
-	
 	
 	// MARK: - Calls
 	override func willActivate() {
@@ -54,7 +60,7 @@ class InterfaceController: WKInterfaceController {
 	func getMotionManagerUpdates() {
 		
 		// init interval for update (NSTimeInterval)
-		self.motionManager.accelerometerUpdateInterval = 0.1
+		self.motionManager.accelerometerUpdateInterval = 1  //0.1
 		
 		// get current accelerometerData
 		if self.motionManager.accelerometerAvailable {
@@ -84,9 +90,39 @@ class InterfaceController: WKInterfaceController {
 						self.xValues.setText(x)
 						self.yValues.setText(y)
 						self.zValues.setText(z)
+						
+						if (self.tracking) {
+							self.countTracking++
+							self.countValue.setText(String(self.countTracking))
+							let trackItem = TrackDataItem()
+							trackItem.accelerationX = (accelerometerData?.acceleration.x)!
+							trackItem.accelerationY = (accelerometerData?.acceleration.y)!
+							trackItem.accelerationZ = (accelerometerData?.acceleration.z)!
+							trackItem.trackId = self.countTracking
+							trackItem.timeStamp = (accelerometerData?.timestamp)!
+							
+							self.sendTrackItem(trackItem)
+						}
 					}
 				}
 			})
 		}
+	}
+	
+	@IBAction func startStopTrackingAction() {
+		if (tracking) {
+			tracking = false
+			btnStartStop.setTitle("START")
+		}
+		else {
+			countTracking = 0
+			tracking = true
+			btnStartStop.setTitle("STOP")
+		}
+	}
+	
+	func sendTrackItem(trackItem: TrackDataItem) {
+		let session = WCSession.defaultSession()
+		session.transferUserInfo(trackItem.toDictionary())
 	}
 }

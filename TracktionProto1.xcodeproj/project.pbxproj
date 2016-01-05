@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092A89081C3C591B00C3797E /* TrackDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093CEFAB1C39B9D80026CA99 /* TrackDataItem.swift */; };
 		093CEFAC1C39B9D80026CA99 /* TrackDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093CEFAB1C39B9D80026CA99 /* TrackDataItem.swift */; };
 		093CEFAF1C39C6A20026CA99 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093CEFAE1C39C6A20026CA99 /* WatchConnectivityManager.swift */; };
 		095247331C32E897009322DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095247321C32E897009322DC /* AppDelegate.swift */; };
@@ -389,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092A89081C3C591B00C3797E /* TrackDataItem.swift in Sources */,
 				095247631C32E898009322DC /* ExtensionDelegate.swift in Sources */,
 				095247611C32E898009322DC /* InterfaceController.swift in Sources */,
 			);

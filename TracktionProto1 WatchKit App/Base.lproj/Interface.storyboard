@@ -8,7 +8,7 @@
         <!--Interface Controller-->
         <scene sceneID="TDQ-Dt-xMr">
             <objects>
-                <controller spacing="30" id="Oah-tz-eVJ" customClass="InterfaceController" customModule="WatchOS2_NewAPI_CoreMotion_CMAccelerometerData_Example_WatchKit_App" customModuleProvider="target">
+                <controller id="Oah-tz-eVJ" customClass="InterfaceController" customModule="TracktionProto1_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group width="1" alignment="left" id="lub-Fd-L04">
                             <items>
@@ -28,9 +28,26 @@
                                 <label alignment="right" text="-1.24" id="hbA-VI-4PU"/>
                             </items>
                         </group>
+                        <group width="1" alignment="left" layout="vertical" id="hBU-hF-TiM">
+                            <items>
+                                <group width="1" alignment="left" id="3iv-h8-GXS">
+                                    <items>
+                                        <label alignment="left" text="Count:" id="pCU-Iv-oCf"/>
+                                        <label alignment="right" text="0" id="Au4-NI-RWT"/>
+                                    </items>
+                                </group>
+                                <button width="1" alignment="left" title="START" id="Q4g-Cd-OTg">
+                                    <connections>
+                                        <action selector="startStopTrackingAction" destination="Oah-tz-eVJ" id="udi-Rr-mYF"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
-                    <edgeInsets key="margins" left="20" right="20" top="0.0" bottom="0.0"/>
+                    <edgeInsets key="margins" left="10" right="10" top="0.0" bottom="0.0"/>
                     <connections>
+                        <outlet property="btnStartStop" destination="Q4g-Cd-OTg" id="UE1-6L-YRm"/>
+                        <outlet property="countValue" destination="Au4-NI-RWT" id="Hze-Ke-XqU"/>
                         <outlet property="xLbl" destination="kcV-Sc-sj4" id="232-CV-68B"/>
                         <outlet property="xValues" destination="uPe-67-1oS" id="7vZ-yT-Fcd"/>
                         <outlet property="yLbl" destination="rNs-CP-dHQ" id="Ck1-hN-GHv"/>
