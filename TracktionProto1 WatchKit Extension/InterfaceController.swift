@@ -30,6 +30,8 @@ class InterfaceController: WKInterfaceController {
 	var tracking = false
 	var countTracking = 0
 	var startSessionTimestamp: NSTimeInterval = 0
+	var countdown = 0
+	var timerCountdown: NSTimer?
 	
 	// MARK: - Context Initializer
 	override func awakeWithContext(context: AnyObject?) {
@@ -45,20 +47,26 @@ class InterfaceController: WKInterfaceController {
 	override func willActivate() {
 		// This method is called when watch view controller is about to be visible to user
 		super.willActivate()
-		// set manager updates
-		getMotionManagerUpdates()
+		//getMotionManagerUpdates()
 	}
 	
 	override func didDeactivate() {
 		// This method is called when watch view controller is no longer visible
 		super.didDeactivate()
-		// to stop updates
+		//stopMotionUpdates()
+	}
+	
+	func stopMotionUpdates() {
+		// vibration when stop
+		WKInterfaceDevice.currentDevice().playHaptic(.Stop)
 		self.motionManager.stopAccelerometerUpdates()
 	}
 	
-	
 	// MARK: - Get Accelerometer Data
 	func getMotionManagerUpdates() {
+		
+		// vibration when start
+		WKInterfaceDevice.currentDevice().playHaptic(.Start)
 		
 		// init interval for update (NSTimeInterval)
 		self.motionManager.accelerometerUpdateInterval = 0.1
@@ -111,10 +119,13 @@ class InterfaceController: WKInterfaceController {
 	}
 	
 	@IBAction func startStopTrackingAction() {
+		
 		if (tracking) {
 			tracking = false
+			stopCountDown()
 			btnStartStop.setTitle("START")
 			
+			// Send last track to close session
 			let trackItem = TrackDataItem()
 			trackItem.trackStartSession = startSessionTimestamp
 			trackItem.trackId = self.countTracking
@@ -124,12 +135,39 @@ class InterfaceController: WKInterfaceController {
 			trackItem.timeStamp = 0
 			trackItem.info = infoEndSession
 			sendTrackItem(trackItem)
+			
+			stopMotionUpdates()
 		}
 		else {
 			countTracking = 0
 			startSessionTimestamp = NSDate().timeIntervalSince1970
 			tracking = true
-			btnStartStop.setTitle("STOP")
+			startCountDown()
+		}
+	}
+	
+	func startCountDown() {
+		countdown = 5
+		btnStartStop.setTitle("\(countdown)")
+		timerCountdown = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "countdownStep:", userInfo: nil, repeats: true)
+	}
+	
+	func stopCountDown() {
+		if let timerCountdown = timerCountdown {
+			timerCountdown.invalidate()
+			self.timerCountdown = nil
+		}
+	}
+	
+	func countdownStep(timer:NSTimer!) {
+		countdown--
+		btnStartStop.setTitle("\(countdown)")
+		if (countdown == 0) {
+			stopCountDown()
+			if (tracking) {
+				btnStartStop.setTitle("STOP")
+				getMotionManagerUpdates()
+			}
 		}
 	}
 	
